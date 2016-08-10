@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}SEOS{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h4>1.Select path update.<br>
+	2.Enter your user name and password.<br>
+	3.Push CDN
+    </h4>
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}
+
+{% block tes_content %}
+<div class="page-header">
+    <p>{{ rmcache }}</p>
+</div>
+<div class="page-header">
+    <p>{{ name|safe }}</p>
+</div>
+{% endblock %}
